@@ -36,4 +36,11 @@ func main() {
 	u, _ := models.GetUser(1)
 
 	fmt.Println(u)
+
+	//users tableのカラムの値を更新する
+	u.Name = "Test2"
+	u.Email = "test2@example.com"
+	u.UpdateUser()
+	u, _ = models.GetUser(1)
+	fmt.Println(u)
 }
