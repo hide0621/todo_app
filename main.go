@@ -43,4 +43,10 @@ func main() {
 	u.UpdateUser()
 	u, _ = models.GetUser(1)
 	fmt.Println(u)
+
+	//users tableのカラムの値を消去する
+	u.DeleteUser()
+	//消去できているか確認
+	u, _ = models.GetUser(1)
+	fmt.Println(u)
 }

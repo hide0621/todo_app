@@ -70,3 +70,17 @@ func (u *User) UpdateUser() (err error) {
 	}
 	return err
 }
+
+//users tableにてidで絞り込んで、そのidに紐付けられた他のカラムの値を消去するクエリを実行する
+func (u *User) DeleteUser() (err error) {
+
+	//idで絞り込んで、そのidに紐付けられた他のカラムの値を消去するコマンドの定義
+	cmd := `delete from users where id = ?`
+
+	_, err = Db.Exec(cmd, u.ID)
+
+	if err != nil {
+		log.Fatalln(err)
+	}
+	return err
+}
