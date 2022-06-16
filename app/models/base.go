@@ -21,8 +21,10 @@ var err error
 //table名を定数で指定
 const (
 	tableNameUser = "users"
+	tableNameToDo = "todos"
 )
 
+//main関数より前にこのinit関数が実行される
 func init() {
 
 	//ドライバーとデータベースファイルの指定
@@ -43,6 +45,16 @@ func init() {
 
 	//「users」というtableの作成
 	Db.Exec(cmdU)
+
+	//「todos」というtableの作成をするコマンドを作成
+	cmdT := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		content TEXT,
+		user_id INTEGER,
+		created_at DATETIME)`, tableNameToDo)
+
+	//「todos」というtableの作成
+	Db.Exec(cmdT)
 }
 
 //uuidの生成

@@ -17,7 +17,9 @@ func main() {
 		log.Println("test")
 	*/
 
-	//base.goのinit関数の呼び出しをしたいので（webapp.sqlというファイルを作成したので、何でも良いから簡単なプログラムを実行している）
+	//base.goのinit関数の呼び出しをしたいので記述している
+	//webapp.sqlというファイルを作成したので、何でも良いから簡単なプログラムを実行している
+	//このコードの実行がトリガーとなり「users」と「todos」というテーブルがsqlite3上に作成される
 	fmt.Println(models.Db)
 
 	/*
