@@ -46,6 +46,7 @@ func GetUser(id int) (user User, err error) {
 	cmd := `select id, uuid, name, email, password, created_at
 	from users where id = ?`
 
+	//クエリの実行
 	err = Db.QueryRow(cmd, id).Scan(
 		&user.ID,
 		&user.UUID,

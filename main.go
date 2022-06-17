@@ -22,15 +22,18 @@ func main() {
 	//このコードの実行がトリガーとなり「users」と「todos」というテーブルがsqlite3上に作成される
 	fmt.Println(models.Db)
 
-	//「users」というtableのカラムに値を入れている（構造体Userのフィールドに紐付いている）
-	u := &models.User{}
-	u.Name = "test"
-	u.Email = "test@example.com"
-	u.PassWord = "testtest"
-	fmt.Println(u)
+	/*
+			//「users」というtableのカラムに値を入れている（構造体Userのフィールドに紐付いている）
+			u := &models.User{}
+			u.Name = "test"
+			u.Email = "test@example.com"
+			u.PassWord = "testtest"
+			fmt.Println(u)
 
-	//「users」というtableのカラムに値が入った状態（valuesの？の部分を埋める）にしてからコマンドの実行
-	u.CreateUser()
+
+		//「users」というtableのカラムに値が入った状態（valuesの？の部分を埋める）にしてからコマンドの実行
+		u.CreateUser()
+	*/
 
 	/*
 		//users tableにてidが「1」のユーザーを取得
@@ -52,8 +55,13 @@ func main() {
 		fmt.Println(u)
 	*/
 
-	//前回「users」テーブルを作るセクションにてuserを作成の後、削除した
-	//userのIDは自動で増分されるので、今回のIDは2番とする
-	user, _ := models.GetUser(2)
-	user.CreateTodo("First Todo")
+	/*
+		//前回「users」テーブルを作るセクションにてuserを作成の後、削除した
+		//userのIDは自動で増分されるので、今回のIDは2番とする
+		user, _ := models.GetUser(2)
+		user.CreateTodo("First Todo")
+	*/
+
+	t, _ := models.GetTodo(1)
+	fmt.Println(t)
 }
