@@ -3,12 +3,9 @@
 
 package controllers
 
-import (
-	"html/template"
-	"log"
-	"net/http"
-)
+import "net/http"
 
+/*
 //ハンドラ関数の定義
 //引数はパターン
 func top(w http.ResponseWriter, r *http.Request) {
@@ -24,4 +21,12 @@ func top(w http.ResponseWriter, r *http.Request) {
 
 	//上記のhtmlファイルを表示する
 	t.Execute(w, "Hello") //第二引数で渡したdateは,上記パスのhtmlファイルにて{{.}}とすることで、その第二引数のdateを渡すことができる
+}
+*/
+
+//ハンドラ関数の定義
+//引数はパターン
+//定義したlayoutテンプレートとtopテンプレートを用いたハンドラ関数の実装
+func top(w http.ResponseWriter, r *http.Request) {
+	generateHTML(w, "Hello", "layout", "top")
 }
