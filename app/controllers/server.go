@@ -8,6 +8,9 @@ import (
 //サーバーの立ち上げ
 func StartMainServer() error {
 
+	files := http.FileServer(http.Dir(config.Config.Static))
+	http.Handle("/static/", http.StripPrefix("/static/", files))
+
 	//ハンドラ関数を実行するURLの登録
 	//パス以下にアクセスしたら「top.html」のwebページを表示するハンドラ関数を実行する
 	http.HandleFunc("/", top) //第二引数がハンドラ関数

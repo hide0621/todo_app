@@ -13,6 +13,7 @@ type ConfigList struct {
 	SQLDriver string
 	DbName    string
 	LogFile   string
+	Static    string
 }
 
 //グローバルで宣言
@@ -42,5 +43,7 @@ func LoadConfig() {
 		DbName: cfg.Section("db").Key("name").String(),
 
 		LogFile: cfg.Section("web").Key("logfile").String(),
+
+		Static: cfg.Section("web").Key("static").String(),
 	}
 }
