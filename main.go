@@ -23,7 +23,7 @@ func main() {
 	fmt.Println(models.Db)
 
 	/*
-		//userの作成を実行する
+		//userの作成のクエリを実行する
 		//「users」というtableのカラムに値を入れている（構造体Userのフィールドに紐付いている）
 		u := &models.User{}
 		u.Name = "test2"
@@ -68,7 +68,7 @@ func main() {
 	*/
 
 	/*
-		//指定したUser_idのuserに対してtodoを作成することを実行する
+		//指定したUser_idのuserに対してtodoを作成するクエリを実行する
 		user, _ := models.GetUser(3)
 		user.CreateTodo("Third Todo")
 	*/
@@ -89,10 +89,16 @@ func main() {
 		}
 	*/
 
-	//idが1番のTodo構造体を持って来て、そのContentフィールドを書き換えて、更新のクエリを実行する
-	//今回はuser_idは更新していない
-	t, _ := models.GetTodo(1)
-	t.Content = "Update Todo"
-	t.UpdateTodo()
+	/*
+		//idが1番のTodo構造体を持って来て、そのContentフィールドを書き換えて、更新のクエリを実行する
+		//今回はuser_idは更新していない
+		t, _ := models.GetTodo(1)
+		t.Content = "Update Todo"
+		t.UpdateTodo()
+	*/
+
+	//idが3番のtodoを削除するクエリを実行する
+	t, _ := models.GetTodo(3)
+	t.DeleteTodo()
 
 }

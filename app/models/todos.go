@@ -136,5 +136,20 @@ func (t *Todo) UpdateTodo() error {
 	if err != nil {
 		log.Fatalln(err)
 	}
+
+	return err
+}
+
+//idで絞り込んで特定のtodoを削除する
+func (t *Todo) DeleteTodo() error {
+
+	cmd := `delete from todos where id = ?`
+
+	_, err := Db.Exec(cmd, t.ID)
+
+	if err != nil {
+		log.Fatalln(err)
+	}
+
 	return err
 }
