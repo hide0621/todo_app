@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"todo_app/app/controllers"
 	"todo_app/app/models"
 )
 
@@ -97,8 +98,13 @@ func main() {
 		t.UpdateTodo()
 	*/
 
-	//idが3番のtodoを削除するクエリを実行する
-	t, _ := models.GetTodo(3)
-	t.DeleteTodo()
+	/*
+		//idが3番のtodoを削除するクエリを実行する
+		t, _ := models.GetTodo(3)
+		t.DeleteTodo()
+	*/
+
+	//サーバーの起動
+	controllers.StartMainServer()
 
 }
