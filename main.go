@@ -23,13 +23,13 @@ func main() {
 	fmt.Println(models.Db)
 
 	/*
-			//「users」というtableのカラムに値を入れている（構造体Userのフィールドに紐付いている）
-			u := &models.User{}
-			u.Name = "test"
-			u.Email = "test@example.com"
-			u.PassWord = "testtest"
-			fmt.Println(u)
-
+		//userの作成を実行する
+		//「users」というtableのカラムに値を入れている（構造体Userのフィールドに紐付いている）
+		u := &models.User{}
+		u.Name = "test2"
+		u.Email = "test2@example.com"
+		u.PassWord = "testtest"
+		fmt.Println(u)
 
 		//「users」というtableのカラムに値が入った状態（valuesの？の部分を埋める）にしてからコマンドの実行
 		u.CreateUser()
@@ -67,11 +67,24 @@ func main() {
 		fmt.Println(t)
 	*/
 
-	user, _ := models.GetUser(2)
-	user.CreateTodo("Second Todo")
+	/*
+		//指定したUser_idのuserに対してtodoを作成することを実行する
+		user, _ := models.GetUser(3)
+		user.CreateTodo("Third Todo")
+	*/
 
-	todos, _ := models.GetTodos()
+	/*
+		todos, _ := models.GetTodos()
+		for _, v := range todos {
+			fmt.Println(v)
+		}
+	*/
+
+	//usr_idが3番のuserのtodoを取得する
+	user2, _ := models.GetUser(3)
+	todos, _ := user2.GetTodosByUser()
 	for _, v := range todos {
 		fmt.Println(v)
 	}
+
 }

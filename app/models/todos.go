@@ -86,3 +86,41 @@ func GetTodos() (todos []Todo, err error) {
 
 	return todos, err
 }
+
+//todos tableにて特定のuser_idを持つuserのtodoだけセレクトするクエリを実行する
+func (u *User) GetTodosByUser() (todos []Todo, err error) {
+
+	cmd := `select id, content, user_id, created_at from todos
+			where user_id = ?`
+
+	//SQLの結果が複数行であることが想定される場合はQueryメソッドを使う
+	rows, err := Db.Query(cmd, u.ID)
+
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	//Nextメソッドを使って次の行に移動する
+	for rows.Next() {
+
+		var todo Todo
+
+		//todos tableにて複数の値を取得する
+		err = rows.Scan(
+			&todo.ID,
+			&todo.Content,
+			&todo.UserID,
+			&todo.CreatedAt)
+
+		if err != nil {
+			log.Fatalln(err)
+		}
+
+		//todosに入れ込む
+		todos = append(todos, todo)
+
+		rows.Close()
+
+	}
+	return todos, err
+}
