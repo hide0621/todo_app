@@ -80,11 +80,19 @@ func main() {
 		}
 	*/
 
-	//usr_idが3番のuserのtodoを取得する
-	user2, _ := models.GetUser(3)
-	todos, _ := user2.GetTodosByUser()
-	for _, v := range todos {
-		fmt.Println(v)
-	}
+	/*
+		//usr_idが3番のuserのtodoを取得する
+		user2, _ := models.GetUser(3)
+		todos, _ := user2.GetTodosByUser()
+		for _, v := range todos {
+			fmt.Println(v)
+		}
+	*/
+
+	//idが1番のTodo構造体を持って来て、そのContentフィールドを書き換えて、更新のクエリを実行する
+	//今回はuser_idは更新していない
+	t, _ := models.GetTodo(1)
+	t.Content = "Update Todo"
+	t.UpdateTodo()
 
 }
