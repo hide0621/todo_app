@@ -28,5 +28,8 @@ func top(w http.ResponseWriter, r *http.Request) {
 //引数はパターン
 //定義したlayoutテンプレートとtopテンプレートを用いたハンドラ関数の実装
 func top(w http.ResponseWriter, r *http.Request) {
-	generateHTML(w, "Hello", "layout", "top")
+
+	//dataとしてHelloを登録、htmlテンプレートとして「layout」と「public_navbar」と「top」を使用
+	generateHTML(w, "Hello", "layout", "public_navbar", "top")
+
 }

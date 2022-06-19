@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- bootstrapのレスポンシブ用のメタタグ -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SampleApp</title>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css"> <!-- このcssファイルの読み込み -->
+    <link rel="stylesheet" href="/static/css/form.css"> <!-- このcssファイルの読み込み -->
 </head>
 <body>
+    {{template "navbar"}}
     <div class="container text-center">
         {{template "content" . }} <!-- top.htmlで宣言したcontentテンプレートを使用する,またdataとして定義したHelloはここに入る -->
     </div>
