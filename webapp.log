@@ -1,1 +1,947 @@
 2022/06/08 13:07:13 main.go:16: test
+2022/06/20 20:58:31 server.go:3197: http: panic serving [::1]:51950: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000186450})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0001a0000}, {0x0, 0x0}, {0xc0000489e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0001a0000?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69f58?, {0x45981a0?, 0xc0001a0000?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0001a0000}, 0xc00010c200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00009b770?}, {0x45981a0, 0xc0001a0000}, 0xc00010c200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9540, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 20:58:31 server.go:3197: http: panic serving [::1]:51951: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 21 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000186900})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0001a00e0}, {0x0, 0x0}, {0xc0000c39e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0001a00e0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc0001a00e0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0001a00e0}, 0xc00010c100)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00009b6b0?}, {0x45981a0, 0xc0001a00e0}, 0xc00010c100)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b95e0, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 20:58:31 server.go:3197: http: panic serving [::1]:51952: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc00009bce0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00011e0e0}, {0x0, 0x0}, {0xc0000499e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00011e0e0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc00011e0e0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00011e0e0}, 0xc00010c300)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00009b860?}, {0x45981a0, 0xc00011e0e0}, 0xc00010c300)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9680, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 20:58:33 server.go:3197: http: panic serving [::1]:51953: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 5 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc0001501b0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00011e1c0}, {0x0, 0x0}, {0xc00004e9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00011e1c0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc00011e1c0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00011e1c0}, 0xc000078100)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000072180?}, {0x45981a0, 0xc00011e1c0}, 0xc000078100)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000074000, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 20:58:33 server.go:3197: http: panic serving [::1]:51954: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000186de0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0001a01c0}, {0x0, 0x0}, {0xc00004d9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0001a01c0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69f58?, {0x45981a0?, 0xc0001a01c0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0001a01c0}, 0xc000078000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0000720f0?}, {0x45981a0, 0xc0001a01c0}, 0xc000078000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000740a0, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 20:58:33 server.go:3197: http: panic serving [::1]:51955: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000187260})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0001a02a0}, {0x0, 0x0}, {0xc00004f9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0001a02a0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69f58?, {0x45981a0?, 0xc0001a02a0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0001a02a0}, 0xc000078300)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000072270?}, {0x45981a0, 0xc0001a02a0}, 0xc000078300)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000074140, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 20:58:35 server.go:3197: http: panic serving [::1]:51956: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 42 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc0000726f0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00007e000}, {0x0, 0x0}, {0xc00004d9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00007e000?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69f58?, {0x45981a0?, 0xc00007e000?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00007e000}, 0xc000184300)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001873e0?}, {0x45981a0, 0xc00007e000}, 0xc000184300)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001f6000, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 20:58:35 server.go:3197: http: panic serving [::1]:51957: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 43 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc00021a450})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc000232000}, {0x0, 0x0}, {0xc00004f9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc000232000?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc000232000?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc000232000}, 0xc000184200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000187380?}, {0x45981a0, 0xc000232000}, 0xc000184200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001f60a0, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 20:58:35 server.go:3197: http: panic serving [::1]:51958: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 27 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000150750})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00011e2a0}, {0x0, 0x0}, {0xc00004e9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00011e2a0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc00011e2a0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00011e2a0}, 0xc00010c500)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001502d0?}, {0x45981a0, 0xc00011e2a0}, 0xc00010c500)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9720, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 20:59:44 server.go:3197: http: panic serving [::1]:51995: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000186450})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0001a0000}, {0x0, 0x0}, {0xc0000489e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0001a0000?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69f58?, {0x45981a0?, 0xc0001a0000?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0001a0000}, 0xc00010c200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00009b770?}, {0x45981a0, 0xc0001a0000}, 0xc00010c200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9400, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 20:59:44 server.go:3197: http: panic serving [::1]:51996: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 21 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000186900})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0001a00e0}, {0x0, 0x0}, {0xc0000c39e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0001a00e0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc0001a00e0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0001a00e0}, 0xc00010c100)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00009b6b0?}, {0x45981a0, 0xc0001a00e0}, 0xc00010c100)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b94a0, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 20:59:44 server.go:3197: http: panic serving [::1]:51997: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000186d80})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0001a01c0}, {0x0, 0x0}, {0xc0000499e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0001a01c0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc0001a01c0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0001a01c0}, 0xc00010c300)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00009b860?}, {0x45981a0, 0xc0001a01c0}, 0xc00010c300)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9540, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 20:59:49 server.go:3197: http: panic serving [::1]:51998: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 5 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000072600})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc000294000}, {0x0, 0x0}, {0xc00004e9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc000294000?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc000294000?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc000294000}, 0xc000078100)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000072150?}, {0x45981a0, 0xc000294000}, 0xc000078100)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000074000, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 20:59:49 server.go:3197: http: panic serving [::1]:51999: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc00009bce0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00011e0e0}, {0x0, 0x0}, {0xc00004d9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00011e0e0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69f58?, {0x45981a0?, 0xc00011e0e0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00011e0e0}, 0xc000078000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0000720f0?}, {0x45981a0, 0xc00011e0e0}, 0xc000078000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000740a0, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 20:59:49 server.go:3197: http: panic serving [::1]:52000: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 40 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc00014a1b0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00011e1c0}, {0x0, 0x0}, {0xc0000499e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00011e1c0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69f58?, {0x45981a0?, 0xc00011e1c0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00011e1c0}, 0xc0001fa000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000186e40?}, {0x45981a0, 0xc00011e1c0}, 0xc0001fa000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001f8000, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:13 server.go:3197: http: panic serving [::1]:52038: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc00009bc80})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00011e0e0}, {0x0, 0x0}, {0xc0000cd9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00011e0e0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69f58?, {0x45981a0?, 0xc00011e0e0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00011e0e0}, 0xc000072700)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00009b770?}, {0x45981a0, 0xc00011e0e0}, 0xc000072700)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9360, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:13 server.go:3197: http: panic serving [::1]:52040: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000334360})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0001a0380}, {0x0, 0x0}, {0xc00020d9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0001a0380?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69d78?, {0x45981a0?, 0xc0001a0380?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0001a0380}, 0xc00010c300)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000074180?}, {0x45981a0, 0xc0001a0380}, 0xc00010c300)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000204000, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:13 server.go:3197: http: panic serving [::1]:52039: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 21 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000075380})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00007a2a0}, {0x0, 0x0}, {0xc0000c39e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00007a2a0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc00007a2a0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00007a2a0}, 0xc000072200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00009b6b0?}, {0x45981a0, 0xc00007a2a0}, 0xc000072200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9400, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:13 server.go:3197: http: panic serving [::1]:52043: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 50 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000388510})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0003bc000}, {0x0, 0x0}, {0xc00039c9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0003bc000?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc0003bc000?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0003bc000}, 0xc0003a6000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000388090?}, {0x45981a0, 0xc0003bc000}, 0xc0003a6000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00038c000, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:14 server.go:3197: http: panic serving [::1]:52050: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 24 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc0003889c0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0003bc0e0}, {0x0, 0x0}, {0xc00004a9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0003bc0e0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc0003bc0e0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0003bc0e0}, 0xc00010c600)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00009be60?}, {0x45981a0, 0xc0003bc0e0}, 0xc00010c600)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9540, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:14 server.go:3197: http: panic serving [::1]:52051: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 25 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000075800})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00007a380}, {0x0, 0x0}, {0xc0000499e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00007a380?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69d78?, {0x45981a0?, 0xc00007a380?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00007a380}, 0xc00010c500)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00009be00?}, {0x45981a0, 0xc00007a380}, 0xc00010c500)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b95e0, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:14 server.go:3197: http: panic serving [::1]:52052: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 41 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc0003348a0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0001a0460}, {0x0, 0x0}, {0xc0000489e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0001a0460?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69d78?, {0x45981a0?, 0xc0001a0460?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0001a0460}, 0xc000184700)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000334420?}, {0x45981a0, 0xc0001a0460}, 0xc000184700)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001d2280, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:19 server.go:3197: http: panic serving [::1]:52053: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 55 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000334d50})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0001a0540}, {0x0, 0x0}, {0xc00039c9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0001a0540?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69d78?, {0x45981a0?, 0xc0001a0540?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0001a0540}, 0xc0003a6300)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000388b40?}, {0x45981a0, 0xc0001a0540}, 0xc0003a6300)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00038c0a0, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:19 server.go:3197: http: panic serving [::1]:52054: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 56 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000388fc0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0003bc1c0}, {0x0, 0x0}, {0xc00004a9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0003bc1c0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc0003bc1c0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0003bc1c0}, 0xc0003a6200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000388ae0?}, {0x45981a0, 0xc0003bc1c0}, 0xc0003a6200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00038c140, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:19 server.go:3197: http: panic serving [::1]:52055: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 46 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000389440})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0003bc2a0}, {0x0, 0x0}, {0xc00039c9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0003bc2a0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc0003bc2a0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0003bc2a0}, 0xc000184800)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000334e10?}, {0x45981a0, 0xc0003bc2a0}, 0xc000184800)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001d2320, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:20 server.go:3197: http: panic serving [::1]:52056: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 26 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000389920})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0003bc380}, {0x0, 0x0}, {0xc0003989e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0003bc380?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc0003bc380?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0003bc380}, 0xc00010c800)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00014c030?}, {0x45981a0, 0xc0003bc380}, 0xc00010c800)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9680, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:20 server.go:3197: http: panic serving [::1]:52057: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 27 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000335290})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0001a0620}, {0x0, 0x0}, {0xc00004b9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0001a0620?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69d78?, {0x45981a0?, 0xc0001a0620?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0001a0620}, 0xc00010c700)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00009bfb0?}, {0x45981a0, 0xc0001a0620}, 0xc00010c700)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9720, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:20 server.go:3197: http: panic serving [::1]:52058: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 49 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc0003357d0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0001a0700}, {0x0, 0x0}, {0xc00004b9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0001a0700?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69d78?, {0x45981a0?, 0xc0001a0700?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0001a0700}, 0xc000184a00)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000335350?}, {0x45981a0, 0xc0001a0700}, 0xc000184a00)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001d23c0, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:21 server.go:3197: http: panic serving [::1]:52059: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 28 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000335c50})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0001a07e0}, {0x0, 0x0}, {0xc00039a9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0001a07e0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69d78?, {0x45981a0?, 0xc0001a07e0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0001a07e0}, 0xc00010ca00)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00014c1b0?}, {0x45981a0, 0xc0001a07e0}, 0xc00010ca00)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b97c0, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:21 server.go:3197: http: panic serving [::1]:52060: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 29 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000389da0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0003bc460}, {0x0, 0x0}, {0xc0003999e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0003bc460?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc0003bc460?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0003bc460}, 0xc00010c900)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00014c150?}, {0x45981a0, 0xc0003bc460}, 0xc00010c900)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9860, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:21 server.go:3197: http: panic serving [::1]:52061: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 16 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000075da0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00007a460}, {0x0, 0x0}, {0xc0000499e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00007a460?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc00007a460?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00007a460}, 0xc000072900)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000075920?}, {0x45981a0, 0xc00007a460}, 0xc000072900)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002041e0, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:53 server.go:3197: http: panic serving [::1]:52062: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 30 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc00014c780})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00011e1c0}, {0x0, 0x0}, {0xc00037f9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00011e1c0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc00011e1c0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00011e1c0}, 0xc0003a6600)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00014c330?}, {0x45981a0, 0xc00011e1c0}, 0xc0003a6600)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9900, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:53 server.go:3197: http: panic serving [::1]:52063: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 31 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000270e10})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00007a620}, {0x0, 0x0}, {0xc00039b9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00007a620?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69d78?, {0x45981a0?, 0xc00007a620?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00007a620}, 0xc00010cb00)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00014c2d0?}, {0x45981a0, 0xc00007a620}, 0xc00010cb00)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b99a0, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:53 server.go:3197: http: panic serving [::1]:52074: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 101 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000336fc0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0003bc620}, {0x0, 0x0}, {0xc0003999e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0003bc620?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69d78?, {0x45981a0?, 0xc0003bc620?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0003bc620}, 0xc0003a6700)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000336b40?}, {0x45981a0, 0xc0003bc620}, 0xc0003a6700)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00038c320, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:55 server.go:3197: http: panic serving [::1]:52075: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 70 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000337440})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0003bc700}, {0x0, 0x0}, {0xc00004b9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0003bc700?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69d78?, {0x45981a0?, 0xc0003bc700?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0003bc700}, 0xc000184e00)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000335e30?}, {0x45981a0, 0xc0003bc700}, 0xc000184e00)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001d2460, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:55 server.go:3197: http: panic serving [::1]:52076: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 71 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000334450})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0003bc000}, {0x0, 0x0}, {0xc00039a9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0003bc000?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc0003bc000?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0003bc000}, 0xc000184d00)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000335dd0?}, {0x45981a0, 0xc0003bc000}, 0xc000184d00)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001d2500, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:01:55 server.go:3197: http: panic serving [::1]:52077: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 107 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000336510})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00011e0e0}, {0x0, 0x0}, {0xc00004f9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00011e0e0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc00011e0e0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00011e0e0}, 0xc000072000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000336090?}, {0x45981a0, 0xc00011e0e0}, 0xc000072000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001d2000, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:02:00 server.go:3197: http: panic serving [::1]:52078: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 90 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc0003369c0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00011e1c0}, {0x0, 0x0}, {0xc0000499e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00011e1c0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc00011e1c0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00011e1c0}, 0xc000184100)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000186150?}, {0x45981a0, 0xc00011e1c0}, 0xc000184100)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b8280, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:02:00 server.go:3197: http: panic serving [::1]:52079: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 91 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000334930})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0003bc0e0}, {0x0, 0x0}, {0xc00039f9e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0003bc0e0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69d78?, {0x45981a0?, 0xc0003bc0e0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0003bc0e0}, 0xc000184000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001860f0?}, {0x45981a0, 0xc0003bc0e0}, 0xc000184000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b8960, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:02:00 server.go:3197: http: panic serving [::1]:52080: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 112 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000336f00})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00011e2a0}, {0x0, 0x0}, {0xc0000499e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00011e2a0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69d78?, {0x45981a0?, 0xc00011e2a0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00011e2a0}, 0xc000072100)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000336a80?}, {0x45981a0, 0xc00011e2a0}, 0xc000072100)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001d20a0, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:02:30 server.go:3197: http: panic serving [::1]:52092: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 73 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc000337020})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0003bc1c0}, {0x0, 0x0}, {0xc0000499e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0003bc1c0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69d78?, {0x45981a0?, 0xc0003bc1c0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0003bc1c0}, 0xc000072200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000336f60?}, {0x45981a0, 0xc0003bc1c0}, 0xc000072200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00046e000, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:02:30 server.go:3197: http: panic serving [::1]:52093: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 74 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc0001f8600})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc00047c000}, {0x0, 0x0}, {0xc0003989e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc00047c000?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f61a20?, {0x45981a0?, 0xc00047c000?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc00047c000}, 0xc000470000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001f8180?}, {0x45981a0, 0xc00047c000}, 0xc000470000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00046e0a0, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/06/20 21:02:30 server.go:3197: http: panic serving [::1]:52094: open app/views/templates/public_nabvar.html: no such file or directory
+goroutine 122 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x44b2f20, 0xc0003352c0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/Cellar/go/1.18.2/libexec/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x45981a0?, 0xc0003bc2a0}, {0x0, 0x0}, {0xc0000499e0?, 0x3, 0x0?})
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/server.go:18 +0x106
+todo_app/app/controllers.login({0x45981a0?, 0xc0003bc2a0?}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_auth.go:50 +0x8d
+net/http.HandlerFunc.ServeHTTP(0x4f69e68?, {0x45981a0?, 0xc0003bc2a0?}, 0x4011605?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x45981a0, 0xc0003bc2a0}, 0xc00017e000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000334e40?}, {0x45981a0, 0xc0003bc2a0}, 0xc00017e000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00017c000, {0x4598458, 0xc00009b560})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db

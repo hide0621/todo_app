@@ -42,3 +42,11 @@ func signup(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/", 302)
 	}
 }
+
+//ハンドラ関数の定義
+func login(w http.ResponseWriter, r *http.Request) {
+
+	//htmlテンプレートとしてファイル名が「layout」と「public_navbar」と「login」のものを使用
+	generateHTML(w, nil, "layout", "public_navbar", "login")
+
+}

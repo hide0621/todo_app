@@ -34,6 +34,9 @@ func StartMainServer() error {
 	//パス以下にアクセスしたら「signup.html」のwebページを表示するハンドラ関数を実行する
 	http.HandleFunc("/signup", signup)
 
+	//ハンドラ関数を実行するURLの登録
+	http.HandleFunc("/login", login)
+
 	//ポート番号を指定してサーバーの立ち上げ
 	return http.ListenAndServe(":"+config.Config.Port, nil) //nilとすることでマルチプレクサを使用する。登録されていないURLにアクセスしたらデフォルトで404エラーを返す。
 

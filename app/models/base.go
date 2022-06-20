@@ -20,8 +20,9 @@ var err error
 
 //table名を定数で指定
 const (
-	tableNameUser = "users"
-	tableNameToDo = "todos"
+	tableNameUser    = "users"
+	tableNameToDo    = "todos"
+	tabelNameSession = "sessions"
 )
 
 //main関数より前にこのinit関数が実行される
@@ -55,6 +56,17 @@ func init() {
 
 	//「todos」というtableの作成
 	Db.Exec(cmdT)
+
+	//「sessions」というtableの作成をするコマンドを作成
+	cmdS := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		uuid STRING NOT NULL UNIQUE,
+		email STRING,
+		user_id INTEGER,
+		created_at DATETIME)`, tabelNameSession)
+
+	//「sessions」というtableの作成
+	Db.Exec(cmdS)
 }
 
 //uuidの生成
