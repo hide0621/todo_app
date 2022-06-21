@@ -37,6 +37,9 @@ func StartMainServer() error {
 	//ハンドラ関数を実行するURLの登録
 	http.HandleFunc("/login", login)
 
+	//ハンドラ関数を実行するURLの登録
+	http.HandleFunc("/authenticate", auhenticate)
+
 	//ポート番号を指定してサーバーの立ち上げ
 	return http.ListenAndServe(":"+config.Config.Port, nil) //nilとすることでマルチプレクサを使用する。登録されていないURLにアクセスしたらデフォルトで404エラーを返す。
 
