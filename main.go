@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"todo_app/app/controllers"
+	"log"
 	"todo_app/app/models"
 )
 
@@ -104,7 +104,23 @@ func main() {
 		t.DeleteTodo()
 	*/
 
-	//サーバーの起動
-	controllers.StartMainServer()
+	/*
+		//サーバーの起動
+		controllers.StartMainServer()
+	*/
 
+	//GetUserByEmail関数のテスト
+	user, _ := models.GetUserByEmail("test@example.com")
+	fmt.Println(user)
+
+	//セッションを取得してそれを表示
+	session, err := user.CreateSession()
+	if err != nil {
+		log.Println(err)
+	}
+	fmt.Println(session)
+
+	//セッションがDBにあるか確認してそれを表示する
+	valid, _ := session.CheckSession()
+	fmt.Println(valid)
 }
