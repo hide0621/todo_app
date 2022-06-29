@@ -33,3 +33,16 @@ func top(w http.ResponseWriter, r *http.Request) {
 	generateHTML(w, "Hello", "layout", "public_navbar", "top")
 
 }
+
+//index.htmlを表示するハンドラ関数
+func index(w http.ResponseWriter, r *http.Request) {
+	//ログインしているかどうか判定する
+	_, err := session(w, r)
+	if err != nil {
+		//ログインしていなければ(セッションがなければ)トップページにリダイレクトされる
+		http.Redirect(w, r, "/", 302)
+	} else {
+		//セッションがあればindex.htmlを表示する
+		generateHTML(w, nil, "layout", "private_navbar", "index")
+	}
+}
