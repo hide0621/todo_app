@@ -13,6 +13,16 @@ func signup(w http.ResponseWriter, r *http.Request) {
 	//GETメソッドの時
 	if r.Method == "GET" {
 
+		//cookieを取得
+		_, err := session(w, r)
+		if err != nil {
+			//ログインしていない(DBにセッションがない)ということなので、signupページにアクセスする
+			generateHTML(w, nil, "layout", "public_navbar", "signup")
+		} else {
+			//ログインしていればtodosのページへアクセスする
+			http.Redirect(w, r, "/todos", 302)
+		}
+
 		//htmlテンプレートとしてファイル名が「layout」と「public_navbar」と「signup」のものを使用
 		generateHTML(w, nil, "layout", "public_navbar", "signup")
 
@@ -47,9 +57,16 @@ func signup(w http.ResponseWriter, r *http.Request) {
 //ハンドラ関数の定義
 func login(w http.ResponseWriter, r *http.Request) {
 
-	//htmlテンプレートとしてファイル名が「layout」と「public_navbar」と「login」のものを使用
-	generateHTML(w, nil, "layout", "public_navbar", "login")
-
+	//cookieを取得
+	_, err := session(w, r)
+	if err != nil {
+		//ログインしていない(DBにセッションがない)ということなので、loginページにアクセスする
+		//htmlテンプレートとしてファイル名が「layout」と「public_navbar」と「login」のものを使用
+		generateHTML(w, nil, "layout", "public_navbar", "login")
+	} else {
+		//ログインしていればtodosのページへアクセスする
+		http.Redirect(w, r, "/todos", 302)
+	}
 }
 
 //ハンドラ関数の定義

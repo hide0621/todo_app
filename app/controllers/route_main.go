@@ -29,6 +29,16 @@ func top(w http.ResponseWriter, r *http.Request) {
 //定義したlayoutテンプレートとtopテンプレートを用いたハンドラ関数の実装
 func top(w http.ResponseWriter, r *http.Request) {
 
+	//cookieを取得
+	_, err := session(w, r)
+	if err != nil {
+		//ログインしていない(DBにセッションがない)ということなので、topページにアクセスする
+		generateHTML(w, "Hello", "layout", "public_navbar", "top")
+	} else {
+		//ログインしていればtodosのページへアクセスする
+		http.Redirect(w, r, "/todos", 302)
+	}
+
 	//dataとしてHelloを登録、htmlテンプレートとしてファイル名が「layout」と「public_navbar」と「top」のものを使用
 	generateHTML(w, "Hello", "layout", "public_navbar", "top")
 
