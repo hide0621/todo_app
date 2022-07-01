@@ -59,9 +59,15 @@ func StartMainServer() error {
 	//ハンドラ関数を実行するURLの登録
 	http.HandleFunc("/logout", logout)
 
-	////ハンドラ関数を実行するURLの登録
+	//ハンドラ関数を実行するURLの登録
 	//ログインしているユーザーしかtodosのページにアクセスできない
 	http.HandleFunc("/todos", index)
+
+	//ハンドラ関数を実行するURLの登録
+	http.HandleFunc("/todos/new", todoNew)
+
+	//ハンドラ関数を実行するURLの登録
+	http.HandleFunc("/todos/save", todoSave)
 
 	//ポート番号を指定してサーバーの立ち上げ
 	return http.ListenAndServe(":"+config.Config.Port, nil) //nilとすることでマルチプレクサを使用する。登録されていないURLにアクセスしたらデフォルトで404エラーを返す。

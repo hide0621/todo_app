@@ -71,3 +71,42 @@ func index(w http.ResponseWriter, r *http.Request) {
 		generateHTML(w, user, "layout", "private_navbar", "index")
 	}
 }
+
+//ハンドラ関数
+func todoNew(w http.ResponseWriter, r *http.Request) {
+	//ログインの確認
+	_, err := session(w, r)
+	if err != nil {
+		http.Redirect(w, r, "/login", 302)
+	} else {
+		//ログインしていれば
+		generateHTML(w, nil, "layout", "private_navbar", "todo_new")
+	}
+}
+
+//ハンドラ関数
+func todoSave(w http.ResponseWriter, r *http.Request) {
+	//ログインの確認
+	sess, err := session(w, r)
+	if err != nil {
+		http.Redirect(w, r, "/login", 302)
+	} else {
+		//ログインしていればTodoCreateのフォームの値を取得する
+		err = r.ParseForm()
+		if err != nil {
+			log.Println(err)
+		}
+		//ユーザーの取得
+		user, err := sess.GetUserBySession()
+		if err != nil {
+			log.Panicln(err)
+		}
+		//ログインしていればTodoCreateのフォームの値をPOSTする
+		content := r.PostFormValue("content")
+		if err := user.CreateTodo(content); err != nil {
+			log.Println(err)
+		}
+		//todoの一覧ページにリダイレクト
+		http.Redirect(w, r, "/todos", 302)
+	}
+}
