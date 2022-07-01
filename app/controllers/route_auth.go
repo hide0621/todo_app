@@ -110,3 +110,20 @@ func auhenticate(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/login", 302)
 	}
 }
+
+//ハンドラ関数の定義
+func logout(w http.ResponseWriter, r *http.Request) {
+
+	//cookieの取得
+	cookie, err := r.Cookie("_cookie")
+	if err != nil {
+		log.Println(err)
+	}
+
+	if err != http.ErrNoCookie {
+		session := models.Session{UUID: cookie.Value}
+		//セッションの削除
+		session.DeleteSessionByUUID()
+	}
+	http.Redirect(w, r, "/login", 302)
+}

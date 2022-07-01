@@ -56,6 +56,9 @@ func StartMainServer() error {
 	//ハンドラ関数を実行するURLの登録
 	http.HandleFunc("/authenticate", auhenticate)
 
+	//ハンドラ関数を実行するURLの登録
+	http.HandleFunc("/logout", logout)
+
 	////ハンドラ関数を実行するURLの登録
 	//ログインしているユーザーしかtodosのページにアクセスできない
 	http.HandleFunc("/todos", index)
