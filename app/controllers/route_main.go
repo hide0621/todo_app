@@ -3,7 +3,10 @@
 
 package controllers
 
-import "net/http"
+import (
+	"log"
+	"net/http"
+)
 
 /*
 //ハンドラ関数の定義
@@ -47,12 +50,24 @@ func top(w http.ResponseWriter, r *http.Request) {
 //index.htmlを表示するハンドラ関数
 func index(w http.ResponseWriter, r *http.Request) {
 	//ログインしているかどうか判定する
-	_, err := session(w, r)
+	//セッションを取得してブラウザのcookieと一致するかどうかチェックする
+	sess, err := session(w, r)
 	if err != nil {
 		//ログインしていなければ(セッションがなければ)トップページにリダイレクトされる
 		http.Redirect(w, r, "/", 302)
 	} else {
+		//セッションのユーザーIDを取得して、それと一致するユーザーを変数userへ代入
+		user, err := sess.GetUserBySession()
+		if err != nil {
+			log.Println(err)
+		}
+		//ユーザーが作成したtodoの一覧を取得
+		todos, _ := user.GetTodosByUser()
+
+		//todoの一覧を構造体UserのTodosフィールドに入れる
+		user.Todos = todos
+
 		//セッションがあればindex.htmlを表示する
-		generateHTML(w, nil, "layout", "private_navbar", "index")
+		generateHTML(w, user, "layout", "private_navbar", "index")
 	}
 }
