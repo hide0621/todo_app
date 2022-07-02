@@ -1036,3 +1036,248 @@ created by net/http.(*Server).Serve
 2022/07/02 10:33:16 route_main.go:63: sql: no rows in result set
 2022/07/02 10:48:08 route_main.go:63: sql: no rows in result set
 2022/07/02 10:48:08 route_main.go:63: sql: no rows in result set
+2022/07/02 11:01:50 route_main.go:63: sql: no rows in result set
+2022/07/02 11:02:00 route_main.go:103: sql: no rows in result set
+2022/07/02 11:02:00 server.go:3197: http: panic serving [::1]:55800: sql: no rows in result set
+
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4491d80, 0xc00021c220})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+log.Panicln({0xc0000cd880?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.18.2/libexec/src/log/log.go:399 +0x65
+todo_app/app/controllers.todoSave({0x459a8a0, 0xc00021e0e0}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_main.go:103 +0x24c
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x459a8a0?, 0xc00021e0e0?}, 0x4063df6?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x459a8a0, 0xc00021e0e0}, 0xc00018c600)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x4599be8?}, {0x459a8a0, 0xc00021e0e0}, 0xc00018c600)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9540, {0x459ab58, 0xc00009b620})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/07/02 11:02:00 route_main.go:103: sql: no rows in result set
+2022/07/02 11:02:00 server.go:3197: http: panic serving [::1]:55801: sql: no rows in result set
+
+goroutine 21 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4491d80, 0xc00012c0a0})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+log.Panicln({0xc0000c3880?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.18.2/libexec/src/log/log.go:399 +0x65
+todo_app/app/controllers.todoSave({0x459a8a0, 0xc00012e000}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_main.go:103 +0x24c
+net/http.HandlerFunc.ServeHTTP(0x4a0ba88?, {0x459a8a0?, 0xc00012e000?}, 0x4063df6?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x459a8a0, 0xc00012e000}, 0xc00018c200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x4599be8?}, {0x459a8a0, 0xc00012e000}, 0xc00018c200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b95e0, {0x459ab58, 0xc00009b620})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/07/02 11:02:00 route_main.go:103: sql: no rows in result set
+2022/07/02 11:02:00 server.go:3197: http: panic serving [::1]:55805: sql: no rows in result set
+
+goroutine 51 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4491d80, 0xc00012c170})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+log.Panicln({0xc0000c3880?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.18.2/libexec/src/log/log.go:399 +0x65
+todo_app/app/controllers.todoSave({0x459a8a0, 0xc00012e0e0}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_main.go:103 +0x24c
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x459a8a0?, 0xc00012e0e0?}, 0x4063df6?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x459a8a0, 0xc00012e0e0}, 0xc000154000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x4599be8?}, {0x459a8a0, 0xc00012e0e0}, 0xc000154000)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000150000, {0x459ab58, 0xc00009b620})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/07/02 11:02:07 route_main.go:63: sql: no rows in result set
+2022/07/02 11:02:07 route_main.go:63: sql: no rows in result set
+2022/07/02 11:02:17 route_main.go:63: sql: no rows in result set
+2022/07/02 11:02:17 route_main.go:63: sql: no rows in result set
+2022/07/02 11:02:24 route_main.go:63: sql: no rows in result set
+2022/07/02 11:02:25 route_main.go:63: sql: no rows in result set
+2022/07/02 11:08:48 route_main.go:63: sql: no rows in result set
+2022/07/02 11:08:48 route_main.go:63: sql: no rows in result set
+2022/07/02 11:08:50 route_main.go:63: sql: no rows in result set
+2022/07/02 11:08:50 route_main.go:63: sql: no rows in result set
+2022/07/02 11:08:52 route_main.go:63: sql: no rows in result set
+2022/07/02 11:08:59 route_main.go:103: sql: no rows in result set
+2022/07/02 11:08:59 server.go:3197: http: panic serving [::1]:55857: sql: no rows in result set
+
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4491d80, 0xc000298a70})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+log.Panicln({0xc0000cd880?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.18.2/libexec/src/log/log.go:399 +0x65
+todo_app/app/controllers.todoSave({0x459a8a0, 0xc00029a460}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_main.go:103 +0x24c
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x459a8a0?, 0xc00029a460?}, 0x4063e76?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x459a8a0, 0xc00029a460}, 0xc0001a2300)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x4599be8?}, {0x459a8a0, 0xc00029a460}, 0xc0001a2300)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b94a0, {0x459ab58, 0xc00009b620})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/07/02 11:08:59 route_main.go:103: sql: no rows in result set
+2022/07/02 11:08:59 server.go:3197: http: panic serving [::1]:55858: sql: no rows in result set
+
+goroutine 21 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4491d80, 0xc000012700})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+log.Panicln({0xc0000bf880?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.18.2/libexec/src/log/log.go:399 +0x65
+todo_app/app/controllers.todoSave({0x459a8a0, 0xc00007c2a0}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_main.go:103 +0x24c
+net/http.HandlerFunc.ServeHTTP(0x4b0ba00?, {0x459a8a0?, 0xc00007c2a0?}, 0x4063e76?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x459a8a0, 0xc00007c2a0}, 0xc00010c200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x4599be8?}, {0x459a8a0, 0xc00007c2a0}, 0xc00010c200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9540, {0x459ab58, 0xc00009b620})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/07/02 11:08:59 route_main.go:103: sql: no rows in result set
+2022/07/02 11:08:59 server.go:3197: http: panic serving [::1]:55861: sql: no rows in result set
+
+goroutine 43 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4491d80, 0xc00018e690})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+log.Panicln({0xc0000c1880?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.18.2/libexec/src/log/log.go:399 +0x65
+todo_app/app/controllers.todoSave({0x459a8a0, 0xc0001e41c0}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_main.go:103 +0x24c
+net/http.HandlerFunc.ServeHTTP(0x4492040?, {0x459a8a0?, 0xc0001e41c0?}, 0x4063e76?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x459a8a0, 0xc0001e41c0}, 0xc0001a2400)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x4599be8?}, {0x459a8a0, 0xc0001e41c0}, 0xc0001a2400)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001be3c0, {0x459ab58, 0xc00009b620})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/07/02 11:09:07 route_main.go:63: sql: no rows in result set
+2022/07/02 11:09:07 route_main.go:63: sql: no rows in result set
+2022/07/02 11:15:33 route_main.go:63: sql: no rows in result set
+2022/07/02 11:15:33 route_main.go:63: sql: no rows in result set
+2022/07/02 11:15:35 route_main.go:63: sql: no rows in result set
+2022/07/02 11:15:35 route_main.go:63: sql: no rows in result set
+2022/07/02 11:15:36 route_main.go:63: sql: no rows in result set
+2022/07/02 11:15:36 route_main.go:63: sql: no rows in result set
+2022/07/02 11:15:39 route_main.go:63: sql: no rows in result set
+2022/07/02 11:15:39 route_main.go:63: sql: no rows in result set
+2022/07/02 11:15:46 route_main.go:63: sql: no rows in result set
+2022/07/02 11:15:52 route_main.go:103: sql: no rows in result set
+2022/07/02 11:15:52 server.go:3197: http: panic serving [::1]:55911: sql: no rows in result set
+
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4491d80, 0xc000013220})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+log.Panicln({0xc0000cd880?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.18.2/libexec/src/log/log.go:399 +0x65
+todo_app/app/controllers.todoSave({0x459a8a0, 0xc00007c8c0}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_main.go:103 +0x24c
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x459a8a0?, 0xc00007c8c0?}, 0x4063e76?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x459a8a0, 0xc00007c8c0}, 0xc000286900)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x4599be8?}, {0x459a8a0, 0xc00007c8c0}, 0xc000286900)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b94a0, {0x459ab58, 0xc00009b620})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/07/02 11:15:52 route_main.go:103: sql: no rows in result set
+2022/07/02 11:15:52 server.go:3197: http: panic serving [::1]:55912: sql: no rows in result set
+
+goroutine 21 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4491d80, 0xc00019c870})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+log.Panicln({0xc0000c3880?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.18.2/libexec/src/log/log.go:399 +0x65
+todo_app/app/controllers.todoSave({0x459a8a0, 0xc00019e2a0}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_main.go:103 +0x24c
+net/http.HandlerFunc.ServeHTTP(0x4b0ba00?, {0x459a8a0?, 0xc00019e2a0?}, 0x4063e76?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x459a8a0, 0xc00019e2a0}, 0xc00010c200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x4599be8?}, {0x459a8a0, 0xc00019e2a0}, 0xc00010c200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000b9540, {0x459ab58, 0xc00009b620})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/07/02 11:15:52 route_main.go:103: sql: no rows in result set
+2022/07/02 11:15:52 server.go:3197: http: panic serving [::1]:55915: sql: no rows in result set
+
+goroutine 90 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1825 +0xbf
+panic({0x4491d80, 0xc000318510})
+	/usr/local/Cellar/go/1.18.2/libexec/src/runtime/panic.go:844 +0x258
+log.Panicln({0xc00036d880?, 0x0?, 0x0?})
+	/usr/local/Cellar/go/1.18.2/libexec/src/log/log.go:399 +0x65
+todo_app/app/controllers.todoSave({0x459a8a0, 0xc00031a1c0}, 0x0?)
+	/Users/fujihara_hideyuki/projects/todo_app/app/controllers/route_main.go:103 +0x24c
+net/http.HandlerFunc.ServeHTTP(0x4492040?, {0x459a8a0?, 0xc00031a1c0?}, 0x4063e76?)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x459a8a0, 0xc00031a1c0}, 0xc000352200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x4599be8?}, {0x459a8a0, 0xc00031a1c0}, 0xc000352200)
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000346280, {0x459ab58, 0xc00009b620})
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/07/02 11:16:12 route_main.go:63: sql: no rows in result set
+2022/07/02 11:16:13 route_main.go:63: sql: no rows in result set
+2022/07/02 11:30:42 route_main.go:66: sql: no rows in result set
+2022/07/02 11:30:42 route_main.go:66: sql: no rows in result set
+2022/07/02 11:30:44 route_main.go:66: sql: no rows in result set
+2022/07/02 11:30:44 route_main.go:66: sql: no rows in result set
+2022/07/02 11:30:45 route_main.go:66: sql: no rows in result set
+2022/07/02 11:30:45 route_main.go:66: sql: no rows in result set
+2022/07/02 11:30:51 route_main.go:66: sql: no rows in result set
+2022/07/02 11:30:52 route_main.go:66: sql: no rows in result set
+2022/07/02 11:41:42 route_main.go:66: sql: no rows in result set
+2022/07/02 11:41:42 route_main.go:66: sql: no rows in result set
+2022/07/02 11:41:45 route_main.go:66: sql: no rows in result set
+2022/07/02 11:41:45 route_main.go:66: sql: no rows in result set
+2022/07/02 11:41:46 route_main.go:66: sql: no rows in result set
+2022/07/02 11:41:46 route_main.go:66: sql: no rows in result set
+2022/07/02 11:41:48 route_main.go:66: sql: no rows in result set
+2022/07/02 11:41:55 route_main.go:106: sql: no rows in result set
+2022/07/02 11:41:55 route_main.go:66: sql: no rows in result set
+2022/07/02 11:41:55 route_main.go:66: sql: no rows in result set
+2022/07/02 11:42:16 route_main.go:66: sql: no rows in result set
+2022/07/02 11:42:16 route_main.go:66: sql: no rows in result set
+2022/07/02 11:43:21 route_main.go:66: sql: no rows in result set
+2022/07/02 11:43:23 route_main.go:66: sql: no rows in result set

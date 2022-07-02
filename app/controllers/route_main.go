@@ -4,6 +4,7 @@
 package controllers
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"todo_app/app/models"
@@ -37,14 +38,16 @@ func top(w http.ResponseWriter, r *http.Request) {
 	_, err := session(w, r)
 	if err != nil {
 		//ログインしていない(DBにセッションがない)ということなので、topページにアクセスする
-		generateHTML(w, "Hello", "layout", "public_navbar", "top")
+		generateHTML(w, nil, "layout", "public_navbar", "top")
 	} else {
 		//ログインしていればtodosのページへアクセスする
 		http.Redirect(w, r, "/todos", 302)
 	}
 
-	//dataとしてHelloを登録、htmlテンプレートとしてファイル名が「layout」と「public_navbar」と「top」のものを使用
-	generateHTML(w, "Hello", "layout", "public_navbar", "top")
+	/*
+		//dataとしてHelloを登録、htmlテンプレートとしてファイル名が「layout」と「public_navbar」と「top」のものを使用
+		generateHTML(w, "Hello", "layout", "public_navbar", "top")
+	*/
 
 }
 
@@ -100,7 +103,7 @@ func todoSave(w http.ResponseWriter, r *http.Request) {
 		//ユーザーの取得
 		user, err := sess.GetUserBySession()
 		if err != nil {
-			log.Panicln(err)
+			log.Println(err)
 		}
 		//ログインしていればTodoCreateのフォームの値をPOSTする
 		content := r.PostFormValue("content")
@@ -119,6 +122,10 @@ func todoEdit(w http.ResponseWriter, r *http.Request, id int) {
 	if err != nil {
 		http.Redirect(w, r, "/login", 302)
 	} else {
+		err = r.ParseForm()
+		if err != nil {
+			log.Println(err)
+		}
 		//ユーザーの確認
 		_, err := sess.GetUserBySession()
 		if err != nil {
@@ -127,8 +134,9 @@ func todoEdit(w http.ResponseWriter, r *http.Request, id int) {
 		//引数のidからtodoを取得する
 		t, err := models.GetTodo(id)
 		if err != nil {
-			log.Println(err)
+			log.Fatalln(err)
 		}
+		fmt.Println(t)
 		generateHTML(w, t, "layout", "private_navbar", "todo_edit")
 	}
 }
@@ -163,6 +171,10 @@ func todoDelete(w http.ResponseWriter, r *http.Request, id int) {
 	if err != nil {
 		http.Redirect(w, r, "/login", 302)
 	} else {
+		err = r.ParseForm()
+		if err != nil {
+			log.Println(err)
+		}
 		//ユーザーの確認
 		_, err := sess.GetUserBySession()
 		if err != nil {
@@ -171,8 +183,9 @@ func todoDelete(w http.ResponseWriter, r *http.Request, id int) {
 		//idからtodoを取得
 		t, err := models.GetTodo(id)
 		if err != nil {
-			log.Println(err)
+			log.Fatalln(err)
 		}
+		fmt.Println(t)
 		if err := t.DeleteTodo(); err != nil {
 			log.Println(err)
 		}

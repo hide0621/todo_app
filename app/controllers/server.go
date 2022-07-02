@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"errors"
 	"fmt"
 	"html/template"
 	"net/http"
@@ -10,7 +11,7 @@ import (
 	"todo_app/config"
 )
 
-func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) {
+func generateHTML(writer http.ResponseWriter, data interface{}, filenames ...string) {
 
 	var files []string
 
@@ -20,22 +21,22 @@ func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) 
 
 	templates := template.Must(template.ParseFiles(files...))
 
-	templates.ExecuteTemplate(w, "layout", data)
+	templates.ExecuteTemplate(writer, "layout", data)
 }
 
 //cookieを取得する関数
-func session(w http.ResponseWriter, r *http.Request) (sess models.Session, err error) {
+func session(writer http.ResponseWriter, request *http.Request) (sess models.Session, err error) {
 	//httpリクエストからcookieを取得する
-	cookie, err := r.Cookie("_cookie")
+	cookie, err := request.Cookie("_cookie")
 	if err != nil {
 		sess = models.Session{UUID: cookie.Value}
 		//上記で受け取ったセッションがDB上にあるセッションと同じか確認
 		if ok, _ := sess.CheckSession(); !ok {
-			err = fmt.Errorf("Invalid session")
+			err = errors.New("Invalid session")
 		}
 	}
 	//上記のセッションがDB上にあればerrは返ってこない
-	return sess, err
+	return
 }
 
 //URLの正規表現のパターンをコンパイルしておく
@@ -88,10 +89,10 @@ func StartMainServer() error {
 	http.HandleFunc("/login", login)
 
 	//ハンドラ関数を実行するURLの登録
-	http.HandleFunc("/authenticate", auhenticate)
+	http.HandleFunc("/logout", logout)
 
 	//ハンドラ関数を実行するURLの登録
-	http.HandleFunc("/logout", logout)
+	http.HandleFunc("/authenticate", authenticate)
 
 	//ハンドラ関数を実行するURLの登録
 	//ログインしているユーザーしかtodosのページにアクセスできない
