@@ -1027,3 +1027,10 @@ net/http.(*conn).serve(0xc0000b9540, {0x459b158, 0xc00009b590})
 	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:1966 +0x5d7
 created by net/http.(*Server).Serve
 	/usr/local/Cellar/go/1.18.2/libexec/src/net/http/server.go:3071 +0x4db
+2022/07/02 10:33:03 route_main.go:63: sql: no rows in result set
+2022/07/02 10:33:04 route_main.go:63: sql: no rows in result set
+2022/07/02 10:33:07 route_main.go:63: sql: no rows in result set
+2022/07/02 10:33:07 route_main.go:63: sql: no rows in result set
+2022/07/02 10:33:09 route_main.go:63: sql: no rows in result set
+2022/07/02 10:33:15 route_main.go:63: sql: no rows in result set
+2022/07/02 10:33:16 route_main.go:63: sql: no rows in result set

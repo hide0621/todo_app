@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
+	"regexp"
+	"strconv"
 	"todo_app/app/models"
 	"todo_app/config"
 )
@@ -34,6 +36,38 @@ func session(w http.ResponseWriter, r *http.Request) (sess models.Session, err e
 	}
 	//上記のセッションがDB上にあればerrは返ってこない
 	return sess, err
+}
+
+//URLの正規表現のパターンをコンパイルしておく
+var validPath = regexp.MustCompile("^/todos/(edit|update)/([0-9]+$)")
+
+//これもパターンとして使われる
+//ハンドラ関数（無名関数）を返す関数として定義されている
+func parseURL(fn func(http.ResponseWriter, *http.Request, int)) http.HandlerFunc {
+	//このハンドラ関数にparseURL関数の処理を書いていく
+	return func(w http.ResponseWriter, r *http.Request) {
+		// /todos/edit/1
+		//validPathとURLがマッチした部分をスライスで取得する
+		q := validPath.FindStringSubmatch(r.URL.Path)
+		//何もマッチしない場合
+		if q == nil {
+			http.NotFound(w, r)
+			return
+		}
+		//スライスqのインデックス番号2番をIDとして受け取り、qiはint型になる
+		qi, err := strconv.Atoi(q[2])
+		if err != nil {
+			http.NotFound(w, r)
+			return
+		}
+		//関数呼び出し（関数オブジェクトのtodoEdit関数を呼び出して実行する）
+		//parseURL関数の引数を渡して実行している(parseURL関数の引数と関数オブジェクトのtodoEdit関数の引数は一致しなければならない)
+		//一番インプルな無名関数の実行のイメージ　fn := func(w http.ResponseWriter, r *http.Request, int) {}　fn()　と同じ意味
+		//無名関数については以下のサイトが分かり易い
+		//https://qiita.com/elephant_dev/items/64e301a5668d6e593429
+		//https://go.dev/tour/moretypes/24
+		fn(w, r, qi)
+	}
 }
 
 //サーバーの立ち上げ
@@ -68,6 +102,16 @@ func StartMainServer() error {
 
 	//ハンドラ関数を実行するURLの登録
 	http.HandleFunc("/todos/save", todoSave)
+
+	//ハンドラ関数を実行するURLの登録
+	//parseURLとtodoEditはハンドラ関数をチェインさせて実行している
+	//故にparseURL関数の戻り値がhttp.HandleFunc型となっている
+	//ハンドラ関数のチェインについては以下のサイトが分かり易い
+	//https://qiita.com/shzawa/items/92279fc06ca3f6aade28
+	http.HandleFunc("todos/edit/", parseURL(todoEdit)) //URL末尾にスラッシュがない場合、URLが完全一致することを求められる。URL末尾にスラッシュがあれば、要求されたURLの先頭が登録されたURLと一致するかどうか調べる。つまりスラッシュがあればスラッシュの後に何か来ていても処理をハンドラ関数に渡すことが出来る。
+
+	//ハンドラ関数を実行するURLの登録
+	http.HandleFunc("/todos/update/", parseURL(todoUpdate))
 
 	//ポート番号を指定してサーバーの立ち上げ
 	return http.ListenAndServe(":"+config.Config.Port, nil) //nilとすることでマルチプレクサを使用する。登録されていないURLにアクセスしたらデフォルトで404エラーを返す。
