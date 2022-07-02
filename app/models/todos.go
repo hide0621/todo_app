@@ -76,12 +76,9 @@ func GetTodos() (todos []Todo, err error) {
 		if err != nil {
 			log.Fatalln(err)
 		}
-
 		//todosに入れ込む
 		todos = append(todos, todo)
-
 	}
-
 	rows.Close()
 
 	return todos, err
@@ -115,13 +112,11 @@ func (u *User) GetTodosByUser() (todos []Todo, err error) {
 		if err != nil {
 			log.Fatalln(err)
 		}
-
 		//todosに入れ込む
 		todos = append(todos, todo)
-
-		rows.Close()
-
 	}
+	rows.Close()
+
 	return todos, err
 }
 
