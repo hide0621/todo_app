@@ -39,7 +39,7 @@ func session(w http.ResponseWriter, r *http.Request) (sess models.Session, err e
 }
 
 //URLの正規表現のパターンをコンパイルしておく
-var validPath = regexp.MustCompile("^/todos/(edit|update)/([0-9]+$)")
+var validPath = regexp.MustCompile("^/todos/(edit|update|delete)/([0-9]+$)")
 
 //これもパターンとして使われる
 //ハンドラ関数（無名関数）を返す関数として定義されている
@@ -112,6 +112,9 @@ func StartMainServer() error {
 
 	//ハンドラ関数を実行するURLの登録
 	http.HandleFunc("/todos/update/", parseURL(todoUpdate))
+
+	//ハンドラ関数を実行するURLの登録
+	http.HandleFunc("/todos/delete/", parseURL(todoDelete))
 
 	//ポート番号を指定してサーバーの立ち上げ
 	return http.ListenAndServe(":"+config.Config.Port, nil) //nilとすることでマルチプレクサを使用する。登録されていないURLにアクセスしたらデフォルトで404エラーを返す。
