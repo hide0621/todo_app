@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
+	"os"
 	"regexp"
 	"strconv"
 	"todo_app/app/models"
@@ -117,7 +118,11 @@ func StartMainServer() error {
 	//ハンドラ関数を実行するURLの登録
 	http.HandleFunc("/todos/delete/", parseURL(todoDelete))
 
+	//Heroku用
+	//環境変数PORTの取得
+	port := os.Getenv("PORT")
+
 	//ポート番号を指定してサーバーの立ち上げ
-	return http.ListenAndServe(":"+config.Config.Port, nil) //nilとすることでマルチプレクサを使用する。登録されていないURLにアクセスしたらデフォルトで404エラーを返す。
+	return http.ListenAndServe(":"+port, nil) //nilとすることでマルチプレクサを使用する。登録されていないURLにアクセスしたらデフォルトで404エラーを返す。
 
 }

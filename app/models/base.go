@@ -7,10 +7,11 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
+	"os"
 	"todo_app/config"
 
 	"github.com/google/uuid"
-	_ "github.com/mattn/go-sqlite3"
+	"github.com/lib/pq"
 )
 
 //データベース名をグローバルに指定
@@ -18,55 +19,73 @@ var Db *sql.DB
 
 var err error
 
+/*
 //table名を定数で指定
 const (
 	tableNameUser    = "users"
 	tableNameToDo    = "todos"
 	tabelNameSession = "sessions"
 )
+*/
 
 //main関数より前にこのinit関数が実行される
 func init() {
 
-	//ドライバーとデータベースファイルの指定
-	Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
+	//herokuの環境変数の取り出し（herokuのPostgreSQLのURL（DATABASE_URL）を左辺に代入）
+	url := os.Getenv("DATABASE_URL")
+	//上記で取得したURLのリソースを変数connectionに代入
+	connection, _ := pq.ParseURL(url)
 
+	connection += "sslmode=require"
+
+	//PostgreSQLをドライバーにして起動する
+	Db, err := sql.Open(config.Config.SQLDriver, connection)
 	if err != nil {
 		log.Fatalln(err)
 	}
 
-	//「users」というtableの作成をするコマンドを作成
-	cmdU := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		uuid STRING NOT NULL UNIQUE,
-		name STRING,
-		email STRING,
-		password STRING,
-		created_at DATETIME)`, tableNameUser)
+	/*
+		//SQLite3用のコード
+		//ドライバーとデータベースファイルの指定
+		Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
 
-	//「users」というtableの作成
-	Db.Exec(cmdU)
+		if err != nil {
+			log.Fatalln(err)
+		}
 
-	//「todos」というtableの作成をするコマンドを作成
-	cmdT := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		content TEXT,
-		user_id INTEGER,
-		created_at DATETIME)`, tableNameToDo)
+		//「users」というtableの作成をするコマンドを作成
+		cmdU := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+			id INTEGER PRIMARY KEY AUTOINCREMENT,
+			uuid STRING NOT NULL UNIQUE,
+			name STRING,
+			email STRING,
+			password STRING,
+			created_at DATETIME)`, tableNameUser)
 
-	//「todos」というtableの作成
-	Db.Exec(cmdT)
+		//「users」というtableの作成
+		Db.Exec(cmdU)
 
-	//「sessions」というtableの作成をするコマンドを作成
-	cmdS := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		uuid STRING NOT NULL UNIQUE,
-		email STRING,
-		user_id INTEGER,
-		created_at DATETIME)`, tabelNameSession)
+		//「todos」というtableの作成をするコマンドを作成
+		cmdT := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+			id INTEGER PRIMARY KEY AUTOINCREMENT,
+			content TEXT,
+			user_id INTEGER,
+			created_at DATETIME)`, tableNameToDo)
 
-	//「sessions」というtableの作成
-	Db.Exec(cmdS)
+		//「todos」というtableの作成
+		Db.Exec(cmdT)
+
+		//「sessions」というtableの作成をするコマンドを作成
+		cmdS := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+			id INTEGER PRIMARY KEY AUTOINCREMENT,
+			uuid STRING NOT NULL UNIQUE,
+			email STRING,
+			user_id INTEGER,
+			created_at DATETIME)`, tabelNameSession)
+
+		//「sessions」というtableの作成
+		Db.Exec(cmdS)
+	*/
 }
 
 //uuidの生成
