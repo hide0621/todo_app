@@ -7,10 +7,9 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
-	"todo_app/config"
 
 	"github.com/google/uuid"
-	_ "github.com/mattn/go-sqlite3"
+	_ "github.com/lib/pq"
 )
 
 //データベース名をグローバルに指定
@@ -29,7 +28,7 @@ const (
 func init() {
 
 	//ドライバーとデータベースファイルの指定
-	Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
+	Db, err = sql.Open("postgres", "user=test_user dbname=testdb paswword=password sslmode=disable")
 
 	if err != nil {
 		log.Fatalln(err)
