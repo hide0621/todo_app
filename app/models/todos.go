@@ -21,7 +21,7 @@ func (u *User) CreateTodo(content string) (err error) {
 	cmd := `insert into todos (
 		content,
 		user_id,
-		created_at) values (?, ?, ?)`
+		created_at) values ($1, $2, $3)`
 
 	//Execメソッドは単純にクエリを実行し、結果行を戻さないメソッド
 	_, err = Db.Exec(cmd, content, u.ID, time.Now())
@@ -35,7 +35,7 @@ func (u *User) CreateTodo(content string) (err error) {
 //todos tableにて指定されたidの値で絞り込んでクエリを実行
 func GetTodo(id int) (todo Todo, err error) {
 	cmd := `select id, content, user_id, created_at from todos
-			where id = ?`
+			where id = $1`
 
 	//前のセクション（コミット）で値は挿入済み
 	todo = Todo{}
@@ -88,7 +88,7 @@ func GetTodos() (todos []Todo, err error) {
 func (u *User) GetTodosByUser() (todos []Todo, err error) {
 
 	cmd := `select id, content, user_id, created_at from todos
-			where user_id = ?`
+			where user_id = $1`
 
 	//SQLの結果が複数行であることが想定される場合はQueryメソッドを使う
 	rows, err := Db.Query(cmd, u.ID)
@@ -123,8 +123,8 @@ func (u *User) GetTodosByUser() (todos []Todo, err error) {
 //idで絞り込んでcontentとuser_idを更新する
 func (t *Todo) UpdateTodo() error {
 
-	cmd := `update todos set content = ?, user_id = ? 
-			where id = ?`
+	cmd := `update todos set content = $1, user_id = $2 
+			where id = $3`
 
 	_, err := Db.Exec(cmd, t.Content, t.UserID, t.ID)
 
@@ -138,7 +138,7 @@ func (t *Todo) UpdateTodo() error {
 //idで絞り込んで特定のtodoを削除する
 func (t *Todo) DeleteTodo() error {
 
-	cmd := `delete from todos where id = ?`
+	cmd := `delete from todos where id = $1`
 
 	_, err := Db.Exec(cmd, t.ID)
 
